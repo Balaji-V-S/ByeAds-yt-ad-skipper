@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": " ByeAds-YouTube Ad Skipper",
+    "version": "1.0.0",
+    "description": "Skips YouTube ads automatically and adds a manual skip button to the player.",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "*://*.youtube.com/*"
+    ],
+    "action": {
+        "default_icon": {
+            "16": "icons/skip-16.png",
+            "32": "icons/skip-32.png",
+            "48": "icons/skip-48.png",
+            "128": "icons/skip-128.png"
+        },
+        "default_title": " ByeAds-YouTube Ad Skipper"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "icons": {
+        "48": "icons/skip-48.png",
+        "128": "icons/skip-128.png"
+    }
+}
