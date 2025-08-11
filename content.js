@@ -33,9 +33,11 @@ const forceSkipAd = () => {
     }
 
     // We also click the button as a backup to help dismiss the ad's UI elements.
-    const skipButton = document.querySelector('.ytp-ad-skip-button, .ytp-ad-skip-button-modern');
+    //const skipButton = document.querySelector('.ytp-ad-skip-button, .ytp-ad-skip-button-modern'); //Check for the skip button.
+    const skipButton = document.querySelector('.ytp-skip-ad-button, .ytp-skip-ad-button-modern'); 
     if (skipButton) {
         skipButton.click();
+        console.log("Clicked the skip button");
     }
 };
 
